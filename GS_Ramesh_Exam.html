@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GS_Ramesh_Exam.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><strong>Getting Started with AWS Cloud</strong></p>
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#getting-started-with-aws-cloud">Getting Started with AWS Cloud</a>
+<ul>
+<li><a href="#sign-up">Sign Up</a>
+<ul>
+<li><a href="#email-verification-and-password-setup">Email Verification and Password Setup</a></li>
+<li><a href="#add-contact-information">Add Contact Information</a></li>
+<li><a href="#add-billing-information">Add Billing Information</a></li>
+<li><a href="#confirm-your-identity">Confirm Your Identity</a></li>
+<li><a href="#select-a-support-plan">Select a Support Plan</a></li>
+<li><a href="#personalize-your-account">Personalize Your Account</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li>
+</ul>
+<h1 id="overview">Overview</h1>
+<p>Amazon Web Services (AWS) is an online computing platform. This platform enables you to work efficiently without relying on high-end physical hardware. AWS provides various services such as Amazon EC2, Amazon Simple Storage Service (S3), Amazon VPC, and Amazon RDS. AWS helps you host simple websites to run complex big data applications and machine learning workloads. This guide helps you to get started with AWS Cloud.</p>
+<p><strong>Benefits</strong></p>
+<ul>
+<li><strong>Easy to use:</strong> Enables you to host and manage applications quickly and easily.</li>
+<li><strong>Flexible:</strong> Provides you scalability based on your needs.</li>
+<li><strong>Reliable:</strong> Provides you with backup and failover.</li>
+<li><strong>Secure:</strong> Uses security features to protect your data and applications.</li>
+<li><strong>Cost-effective:</strong> Enables you to pay only for the resources you use.</li>
+</ul>
+<p><strong>Key system requirements</strong></p>
+<ul>
+<li><strong>Web browser:</strong> The latest version of Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari is required for accessing the AWS Management console.</li>
+<li><strong>Internet connection:</strong> A stable and fast internet connection is recommended, as AWS is a cloud-service.</li>
+<li><strong>Operating system:</strong> AWS is compatible on most modern operating systems including Windows, macOS, and Linux.</li>
+</ul>
+<h1 id="getting-started-with-aws-cloud">Getting Started with AWS Cloud</h1>
+<p>AWS provides extensive cloud computing services with a pay-as-you-go model. This guide helps you create an AWS account and personalize your experience.</p>
+<h2 id="sign-up">Sign Up</h2>
+<p>Sign-up for AWS includes the following steps:</p>
+<ol>
+<li>Email verification and password setup</li>
+<li>Add contact information</li>
+<li>Add Billing Information</li>
+<li>Confirm your identity</li>
+<li>Select a support plan</li>
+<li>Personalize your account</li>
+</ol>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Email address</li>
+<li>Phone number</li>
+<li>User name and address</li>
+<li>Credit/Debit card</li>
+</ul>
+<h3 id="email-verification-and-password-setup">Email Verification and Password Setup</h3>
+<ol>
+<li>
+<p>On your desktop/laptop, open the AWS website.</p>
+</li>
+<li>
+<p>On the left pane, select <strong>Create a new AWS account</strong>.</p>
+</li>
+<li>
+<p>On the Sign-up page, perform the following steps:</p>
+<p>a. In the <strong>Root user email address</strong> field, enter the email address you want to use to manage your AWS account.</p>
+<p><strong>Note:</strong> The root user is the administrator for the AWS account.</p>
+<p>b. In the <strong>AWS account name</strong> field, enter your desired account name.</p>
+<p>c. Select <strong>Verify email address</strong>.</p>
+<p>A verification code is sent to your email address.</p>
+<p><img src="images/Signup_page.png" alt="image1"></p>
+<p>d. In the <strong>Verification code</strong> field, enter the verification code.</p>
+<p>e. Select <strong>Verify</strong>.</p>
+<p>Your email address is verified.</p>
+<p>f. In the <strong>Create your password</strong> page, perform the following steps:</p>
+<p>i.   In the <strong>Root user password</strong> field, enter your desired account password.</p>
+<p>ii.  In the <strong>Confirm root user password</strong> field, reenter the password.</p>
+<p>iii. Select <strong>Continue (step 1 of 5)</strong>.</p>
+<p><img src="images/Continue_step1of5.png" alt="image2"></p>
+<p>The <strong>Contact Information</strong> page is displayed.</p>
+</li>
+</ol>
+<h3 id="add-contact-information">Add Contact Information</h3>
+<ol>
+<li>
+<p>On the <strong>Contact Information</strong> page, perform the following steps:</p>
+<p>a. For the <strong>How do you plan to use AWS</strong> question, select one of the following options:</p>
+<ul>
+<li>Select Business - for your work, school, or organization.</li>
+<li>Select Personal - for your own projects.</li>
+</ul>
+<p>b. In the <strong>Who should we contact about this account</strong> section, enter your contact information.</p>
+<p>c. Select <strong>AWS Customer Agreement</strong> and read it carefully.</p>
+<p>d. Select the check box and select <strong>Continue (step 2 of 5)</strong>.</p>
+<p><img src="images/Continue_step2of5.png" alt="image3"></p>
+<p>The <strong>Billing Information</strong> page is displayed.</p>
+</li>
+</ol>
+<h3 id="add-billing-information">Add Billing Information</h3>
+<ol>
+<li>
+<p>On the <strong>Billing Information</strong> page, perform the following steps:</p>
+<p>a. In the <strong>Billing Information</strong> field, enter your desired credit/debit card details for AWS payments.</p>
+<p>b. In the <strong>Billing address</strong> section, select one of the following options:</p>
+<ul>
+<li>Select <strong>Use my contact address</strong> to use the address provided on the contact information page during billing.</li>
+<li>Select <strong>Use a new address</strong> to add a different address during billing.</li>
+</ul>
+</li>
+<li>
+<p>Select <strong>Verify and continue (step 3 of 5)</strong>.</p>
+</li>
+</ol>
+<p><img src="images/Continue_step3of5.png" alt="image4"></p>
+<p>An OTP is sent to your registered mobile number for card verification, and you are redirected to the bank’s OTP verification page.</p>
+<p><strong>Note:</strong> A refundable amount is charged and automatically refunded after verification.</p>
+<ol start="3">
+<li>
+<p>On the bank’s OTP verification page, enter the OTP.</p>
+</li>
+<li>
+<p>Select <strong>SUBMIT</strong>.</p>
+</li>
+</ol>
+<p>The Confirm your identity page is displayed.</p>
+<h3 id="confirm-your-identity">Confirm Your Identity</h3>
+<ol>
+<li>
+<p>On the <strong>Confirm your identity</strong> page, perform one the following options:</p>
+<ul>
+<li>
+<p>Using Text message</p>
+<p>i. In the <strong>How should we send you the verification code?</strong> section, select <strong>Text message (SMS)</strong>.</p>
+<p>ii. Select your country code and enter your mobile number.</p>
+<p>iii. Enter the captcha code displayed.</p>
+<p>iv. Select <strong>Send SMS (step 4 of 5)</strong>.</p>
+<p>A verification code is sent to the mobile number.</p>
+<p>v. In the <strong>Verify code</strong> field, enter the verification code.</p>
+<p>vi. select <strong>Continue (step 4 of 5)</strong>.</p>
+<p><img src="images/Continue_step4of5.png" alt="image5"></p>
+</li>
+<li>
+<p>Using Voice call</p>
+<p>i. In the <strong>How should we send you the verification code?</strong> section, select Voice call.</p>
+<p>ii. Select your country code and enter your mobile number.</p>
+<p>iii. Enter the captcha code displayed.</p>
+<p>iv. Select <strong>Call me now (step 4 of 5)</strong>.</p>
+<p>A verification call from AWS is made to the mobile number.</p>
+<p>v. In the <strong>Verify code</strong> field, enter the verification code received through the call.</p>
+<p>vi. select <strong>Continue (step 4 of 5)</strong>.</p>
+<p><img src="images/Continue_step4of5.png" alt="image6"></p>
+</li>
+</ul>
+<p>The Select a support plan page is displayed.</p>
+</li>
+</ol>
+<h3 id="select-a-support-plan">Select a Support Plan</h3>
+<ol>
+<li>
+<p>On the <strong>Select a support plan</strong> page, select your desired plan.</p>
+<p><strong>Note:</strong> You can change your plan anytime in the AWS Management console.</p>
+</li>
+<li>
+<p>Select <strong>Complete sign up</strong>.</p>
+<p><img src="images/supportplan.png" alt="image7"></p>
+<p>Your support plan is selected and the Congratulations page is displayed.</p>
+</li>
+</ol>
+<h3 id="personalize-your-account">Personalize Your Account</h3>
+<ol>
+<li>On the <strong>Congratulations</strong> page, select <strong>Go to the AWS Management Console</strong>.</li>
+</ol>
+<p><img src="images/Congratulations_page.png" alt="image8"></p>
+<ol start="2">
+<li>
+<p>On the <strong>Welcome to Amazon Web Services</strong> page, perform the following steps:</p>
+<p>a. From the <strong>select role</strong> drop-down, select your desired role.</p>
+<p>b. From the <strong>select area</strong> drop-down, select your area of interest.</p>
+<p>c. Select <strong>Submit</strong>.</p>
+<p><img src="images/Personalize.png" alt="image9"></p>
+<p>Your account is personalized, and AWS suggests services based on your interests and preferences.</p>
+</li>
+</ol>
+<p>You have successfully signed up for an AWS Cloud account. You can start exploring and using AWS services to build, deploy, and manage your applications based on your requirements.</p>
+<h1 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h1>
+<p><strong>What is AWS?</strong></p>
+<p>Amazon Web Services (AWS) is a cloud computing platform that provides a range of services such as computing power, storage, and databases.</p>
+<p><strong>Is AWS free to use?</strong></p>
+<p>AWS offers some free services, but not all of them are free.</p>
+<p><strong>How do I create an AWS account?</strong></p>
+<p>You can create an AWS account by visiting the AWS website and signing up with your email, contact details, and a valid payment method.</p>
+<p><strong>Do I need to install AWS on my computer?</strong></p>
+<p>No, AWS is a cloud-based service. You can access AWS using your browser.</p>
+<p><strong>What is a Root user?</strong></p>
+<p>The Root user in AWS is the original account owner with full administrative access.</p>
+<p><strong>Do I need a credit card to create an AWS account?</strong></p>
+<p>Yes, AWS requires a credit or debit card to verify your account.</p>
+<p><strong>Can I store files in AWS?</strong></p>
+<p>Yes, you can store files securely using Amazon S3.</p>
+<p><strong>How can I learn AWS?</strong></p>
+<p>You can learn AWS using AWS documentation and AWS Training &amp; Certification modules available on the AWS website.</p>
+
+</body>
+</html>
