@@ -1,4 +1,4 @@
-**Getting started with AWS Cloud**
+**Getting Started with AWS Cloud**
 
 **Table of Contents**
 - [Overview](#overview)
@@ -14,7 +14,7 @@
 
 
 # Overview
-Amazon Web Services (AWS) is an online computing platform. This platform enables you to work efficiently without relying on high-end physical hardware. AWS provides various services such as Amazon EC2, Amazon Simple Storage Service (S3), Amazon VPC, and Amazon RDS. AWS helps you host simple websites to run complex big data applications and machine learning workloads. This guide helps you to get started with AWS.
+Amazon Web Services (AWS) is an online computing platform. This platform enables you to work efficiently without relying on high-end physical hardware. AWS provides various services such as Amazon EC2, Amazon Simple Storage Service (S3), Amazon VPC, and Amazon RDS. AWS helps you host simple websites to run complex big data applications and machine learning workloads. This guide helps you to get started with AWS Cloud.
 
 **Benefits**
 * **Easy to use:** Enables you to host and manage applications quickly and easily.
@@ -201,7 +201,7 @@ The Confirm your identity page is displayed.
 
     Your account is personalized, and AWS suggests services based on your interests and preferences.
 
-You have successfully signed up for an AWS account. You can start exploring and using AWS services to build, deploy, and manage your applications based on your requirements.
+You have successfully signed up for an AWS Cloud account. You can start exploring and using AWS services to build, deploy, and manage your applications based on your requirements.
 
 # Frequently Asked Questions (FAQs)
 
