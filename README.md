@@ -2,7 +2,7 @@
 
 **Table of Contents**
 - [Overview](#overview)
-- [Getting Started with AWS](#getting-started-with-aws)
+- [Getting Started with AWS Cloud](#getting-started-with-aws)
   - [Sign Up](#sign-up)
     - [Email Verification and Password Setup](#email-verification-and-password-setup)
     - [Add Contact Information](#add-contact-information)
