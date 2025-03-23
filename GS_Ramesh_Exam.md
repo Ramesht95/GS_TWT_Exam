@@ -71,7 +71,7 @@ Sign-up for AWS includes the following steps:
 
     e. Select **Verify**.
 
-    Your email address is verified
+    Your email address is verified.
 
     f. In the **Create your password** page, perform the following steps:
 
