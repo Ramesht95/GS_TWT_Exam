@@ -1,6 +1,6 @@
 **Getting started with AWS Cloud**
 
-[[TOC]]- [GS\_TWT\_Exam](#gs_twt_exam)
+**Table of Contents**
 - [Overview](#overview)
 - [Getting Started with AWS](#getting-started-with-aws)
   - [Sign Up](#sign-up)
