@@ -29,7 +29,7 @@ Amazon Web Services (AWS) is an online computing platform. This platform enables
 * **Internet connection:** A stable and fast internet connection is recommended, as AWS is a cloud-service.
 * **Operating system:** AWS is compatible on most modern operating systems including Windows, macOS, and Linux.
 
-# Getting Started with AWS
+# Getting Started with AWS Cloud
 
 AWS provides extensive cloud computing services with a pay-as-you-go model. This guide helps you create an AWS account and personalize your experience.
 
