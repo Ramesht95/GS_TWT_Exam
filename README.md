@@ -1,4 +1,4 @@
-**Getting started with AWS Cloud**
+**Getting Started with AWS Cloud**
 
 **Table of Contents**
 - [Overview](#overview)
